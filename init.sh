@@ -58,7 +58,7 @@ mkdir -p /opt/efk/.curator
 cat curator.yml>/opt/efk/.curator/curator.yml
 cat delete_indices.yml>/opt/efk/.curator/delete_indices.yml
 
-sleep 20
+sleep 10
 
 #Check the status of kibana
 KIBANA_STATUS=`curl -Is http://localhost:5601/app/kibana | head -n 1 | awk '{print $2}'`
