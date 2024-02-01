@@ -4,6 +4,6 @@ USER root
 #testpnc
 RUN mkdir /etc/fluent
 ADD fluent.conf /etc/fluent/
-RUN gem install --http-proxy http://10.133.12.181:80 fluent-plugin-record-reformer
-RUN gem install --http-proxy http://10.133.12.181:80 fluent-plugin-elasticsearch
+RUN gem install fluent-plugin-record-reformer
+RUN gem install fluent-plugin-elasticsearch
 ENTRYPOINT ["fluentd", "-c", "/etc/fluent/fluent.conf"]

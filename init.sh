@@ -16,7 +16,7 @@ fi
 ES_PID=`sudo  docker ps | grep elasticsearch | awk '{print $1}'`
 
 if [ "$ES_PID" == "" ]; then
-   sudo docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.7.0
+   sudo docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:8.12.0
 else
   echo "Elastic search is already running ..."
   echo "Skipping ES setup"
@@ -46,7 +46,7 @@ fi
 sudo docker run -d --name fluentd --link elasticsearch:es -v  /docker/docker/containers:/docker/docker/containers fluentd-es
 
 #Start kibana
-sudo docker run -d --name kibana --link elasticsearch:elasticsearch -p 5601:5601 docker.elastic.co/kibana/kibana:6.7.0
+sudo docker run -d --name kibana --link elasticsearch:elasticsearch -p 5601:5601 docker.elastic.co/kibana/kibana:8.12.0
 
 
 #To install curator
