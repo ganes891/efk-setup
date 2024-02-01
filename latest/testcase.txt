@@ -1,0 +1,2 @@
+#testpnc
+You are downloading the latest (2.32.0) 64-bit version of Git for Windows. This is the most recent maintained build. It was released 10 days ago, on 2021-07-06.
