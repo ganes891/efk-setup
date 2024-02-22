@@ -1,3 +1,8 @@
+ 
+# Jupyter 
+
+docker container run --network=app -idt --rm -p 8888:8888 jupyter/base-notebook
+
 # docker-promtail-loki
 Docker Compose Stack with Grafana Loki and Promtail
 
